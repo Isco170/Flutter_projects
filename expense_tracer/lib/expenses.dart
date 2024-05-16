@@ -1,4 +1,6 @@
+import 'package:expense_tracer/expenses_list.dart';
 import 'package:expense_tracer/models/expense.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Expenses extends StatefulWidget {
@@ -18,7 +20,7 @@ class _ExpensesState extends State<Expenses> {
         date: DateTime.now(),
         category: Category.work),
     Expense(
-        title: 'Cinea',
+        title: 'Cinema',
         amount: 15.69,
         date: DateTime.now(),
         category: Category.leisure),
@@ -29,6 +31,11 @@ class _ExpensesState extends State<Expenses> {
       body: Column(
         children: [
           Text('The chart'),
+          Expanded(
+            child: ExpensesList(
+              expenses: _registeredExpenses,
+            ),
+          ),
         ],
       ),
     );

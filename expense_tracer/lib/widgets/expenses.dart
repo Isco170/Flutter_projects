@@ -1,6 +1,5 @@
 import 'package:expense_tracer/widgets/expenses_list/expenses_list.dart';
 import 'package:expense_tracer/models/expense.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Expenses extends StatefulWidget {
@@ -28,6 +27,10 @@ class _ExpensesState extends State<Expenses> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Flutter Expense Tracker'),
+        actions: [IconButton(icon: const Icon(Icons.add), onPressed: () {})],
+      ),
       body: Column(
         children: [
           Text('The chart'),

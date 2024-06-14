@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
+      theme: ThemeData().copyWith(
+        scaffoldBackgroundColor: Color.fromARGB(255, 220, 189, 252),
+      ),
       home: Expenses(),
     ),
   );
